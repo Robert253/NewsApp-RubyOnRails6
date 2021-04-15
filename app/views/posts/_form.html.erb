@@ -10,8 +10,8 @@
       </ul>
     </div>
   <% end %>
-  
 
+<% if current_user && current_user.admin %>
   <div class="field">
     <%= form.label :title %>
     <%= form.text_field :title %>
@@ -27,6 +27,30 @@
     <%= form.text_area :conclusion %>
   </div>
 
+  <div class="field">
+    <%= form.label :published %>
+    <%= form.check_box :published %>
+  </div>
+
+  <% else %>
+  <% if current_user %>
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :body %>
+    <%= form.text_area :body %>
+  </div>
+
+  <div class="field">
+    <%= form.label :conclusion %>
+    <%= form.text_area :conclusion %>
+  </div>
+  <% end %>
+
+<% end %>
   <div class="actions">
     <%= form.submit %>
   </div>

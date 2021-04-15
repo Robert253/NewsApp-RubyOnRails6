@@ -1,8 +1,10 @@
 class HomeController < ApplicationController
   before_action :load_posts, only: :index
 
+
   def index
-    #logic for your index
+    @q = Post.ransack(params[:q])
+    @posts = @q.result
   end
 
   private
@@ -10,4 +12,6 @@ class HomeController < ApplicationController
   def load_posts
     @posts = Post.order("created_at desc").limit(6)
   end
+
+
 end

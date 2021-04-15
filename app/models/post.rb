@@ -9,17 +9,8 @@ class Post < ApplicationRecord
   def display_day_published
     "Published : #{created_at.strftime('%-b %-d, %Y')}"
   end
-
-
-    def publish
-      respond_to do |format|
-        if @post.publish(post_params)
-          format.html { redirect_to @post, notice: "Post was successfully updated." }
-          format.json { render :show, status: :ok, location: @post }
-        else
-          format.html { render :edit, status: :unprocessable_entity }
-          format.json { render json: @post.errors, status: :unprocessable_entity }
-        end
-      end
+  
+  def user_name_published
+      "Written by: #{user.email}"
     end
-  end
+end
