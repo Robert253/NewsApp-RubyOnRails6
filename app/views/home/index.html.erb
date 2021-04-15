@@ -1,0 +1,22 @@
+<h1>Home#index</h1>
+<p>Find me in app/views/home/index.html.erb</p>
+<div class="container">
+  <div class="row">
+        <table class="table table-striped">
+          <tr>
+          </tr>
+          <%= render @posts = Post.where(:published => true)%>
+        </table>
+  </div>
+</div>
+
+<div class="container-fluid">
+
+  <p>External </p>
+
+<a class="twitter-timeline" data-width="300" data-height="400" data-theme="light"
+ href="https://twitter.com/SkyNewsBreak?ref_src=twsrc%5Etfw">Tweets by SkyNewsBreak</a>
+
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>

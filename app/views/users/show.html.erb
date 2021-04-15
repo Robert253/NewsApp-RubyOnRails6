@@ -1,0 +1,17 @@
+<h1>Users#show</h1>
+<p>Find me in app/views/users/show.html.erb</p>
+
+<div>
+  <aside class="col-md-4">
+    <div>
+      <h1>My Profile</h1>
+    </div>
+    <div class="hero-unit user_info">
+      <h1><%= @user.email %></h1>
+    </div>
+  </aside>
+</div>
+
+<% @user_posts.each do |post| %>
+<%= post.title %>
+<% end %>
