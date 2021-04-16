@@ -1,5 +1,5 @@
 ActiveAdmin.register Post do
-  
+
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
@@ -14,14 +14,7 @@ ActiveAdmin.register Post do
   #   permitted << :other if params[:action] == 'create' && current_user.admin?
   #   permitted
   # end
-    member_action :publish, method: :put do
-      resource.publish!
-      redirect_to resource_path, notice: "Published!"
-    end
 
-    action_item :publish, only: :show, if: proc { !resource.published? } do
-      link_to 'Publish', [:publish, :admin, resource], method: :put
-    end
 
     index do
     selectable_column
