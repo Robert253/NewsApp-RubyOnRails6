@@ -1,5 +1,7 @@
 # Robert Foster X17140404
 # run rake file command if you make changes in this file
+# Needs Jewler gem for creation/ built in another app and had trouble incorporating into this
+# through some investigation think it could be mysql DB not working
 
 Gem::Specification.new do |spec|
   spec.name = 'profanity_filter'

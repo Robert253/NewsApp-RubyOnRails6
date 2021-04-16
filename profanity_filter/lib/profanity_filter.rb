@@ -1,7 +1,6 @@
-# Robert Foster X17140404 
+# Robert Foster X17140404
 module ProfanityFilter
   def self.included(base)
-    # base.send :extend, ClassMethods
       base.class_eval do
         extend ClassMethods
       end

@@ -3,7 +3,6 @@
   <%= search_form_for @q do |f| %>
   <%= f.label :body_cont %>
   <%= f.search_field :body_cont %>
-
   <%= f.submit name: ''%>
   <% end %>
 
@@ -12,7 +11,6 @@
         <tr>
             <%= render @posts %>
         </tr>
-
       </table>
 </div>
 <div class="py-4">
