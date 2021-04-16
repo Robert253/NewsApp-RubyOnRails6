@@ -1,21 +1,32 @@
-<div class="container">
-
-
+<div class="container col-md-10 offset-md-1 col-lg-8 offset-lg-2 text-xs-left">
   <aside class="col-md-4">
     <div>
-      <h1 class="text-center">Profile Page</h1>
-      <h1 class="text-center"><%= @user.email %></h1>
+      <h1>My Profile</h1>
+    </div>
+    <div class="hero-unit user_info">
+      <h1><%= @user.email %></h1>
     </div>
   </aside>
 </div>
 
 <% @user_posts.each do |post| %>
-<%= post.title %>
-
-
-
-
-
-
-
+    <div class="container ">
+      <div class="card mb-2">
+        <div class="card-block p-3 bg-light text-muted">
+          <table class="table">
+             <thead>
+              <label for="colFormLabelSm" class="col-sm-8"><%= post.title %></label>
+            </thead>
+            <tbody>
+                <th scope="row">
+                    <%= truncate(post.body, length: 150) %>
+                </th>
+                <th scope="row">
+                  <%= link_to 'post', post %>
+                </th>
+            </tbody>
+              </table>
+          </div>
+      </div>
+  </div>
 <% end %>
