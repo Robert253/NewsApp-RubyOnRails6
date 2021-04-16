@@ -7,11 +7,8 @@
     <p class-"card-text"><%= truncate(post.body, length: 130) %></p>
     <%= link_to 'Read', post, class: 'btn btn-info' %>
     <% if current_user && current_user.admin %>
-    <%= link_to 'Delete post', post, method: :delete, data: { confirm: 'Are you sure?' } , class: 'btn btn-danger' %>
-    <% end %>
-
-    <% if current_user && current_user.admin %>
     <%= link_to 'Publish', edit_post_path(post) , class: 'btn btn-success' %>
+    <%= link_to 'Delete post', post, method: :delete, data: { confirm: 'Are you sure?' } , class: 'btn btn-danger' %>
     <% end %>
     </div>
 
