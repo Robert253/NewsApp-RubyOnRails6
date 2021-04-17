@@ -20,9 +20,8 @@ Find me in app/views/home/index.html.erb
           <%= render @posts = Post.where(:published => true)%>
         </table>
   </div>
-
-  <a class="twitter-timeline" data-width="300" data-height="400" data-theme="dark"
-   href="https://twitter.com/SkyNewsBreak?ref_src=twsrc%5Etfw">Tweets by SkyNews</a>
-
+<!-- if twitter timeline isnt showing please check the status at https://api.twitterstat.us/ -->
+  <a class="twitter-timeline" data-width="300" data-height="400" data-theme="light"
+   href="https://twitter.com/SkyNewsBreak?ref_src=twsrc%5Etfw"></a>
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>

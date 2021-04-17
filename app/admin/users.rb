@@ -21,8 +21,7 @@ ActiveAdmin.register User do
       column :email
       column :updated_at
       column :admin
-      column :user_name
     actions
   end
-permit_params :email, :updated_at, :admin, :user_name
+permit_params :email, :updated_at, :admin
 end
