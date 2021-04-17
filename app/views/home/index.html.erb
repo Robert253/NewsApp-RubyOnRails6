@@ -1,18 +1,18 @@
-<!--
-Robert Foster
-Student Number : X17140404
-Routes (Home#index)
-Find me in app/views/home/index.html.erb
--->
+  <!--
+  Robert Foster
+  Student Number : X17140404
+  Routes (Home#index)
+  Find me in app/views/home/index.html.erb
+  -->
 
 <div class="container">
   <h1 class="text-muted">News Site Main page</h1>
   <%= search_form_for @q do |f| %>
-  <%= f.label :body_cont  %>
   <%= f.search_field :body_cont %>
 
   <%= f.submit name: ''%>
   <% end %>
+  <h2 class="text-muted">Published posts</h2>
   <div class="row">
         <table class="table table-striped">
           <tr>

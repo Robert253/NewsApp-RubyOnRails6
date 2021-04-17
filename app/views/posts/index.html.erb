@@ -1,7 +1,6 @@
 <div class="container">
   <h1>Editor dashboard</h1>
   <%= search_form_for @q do |f| %>
-  <%= f.label :body_cont %>
   <%= f.search_field :body_cont %>
   <%= f.submit name: ''%>
   <% end %>
