@@ -48,6 +48,6 @@ test:
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
+# DB connection
 production:
-  <<: *default
-  database: <%= ENV['DATABASE_URL'] %>
+  database: <%= ENV['postgres://bwkihuqldustqr:bf5a3292ce7b3ca3445bca282b06a7bc66220c26f6eb540e7e5879b7855cd106@ec2-54-155-226-153.eu-west-1.compute.amazonaws.com:5432/d8e9bjnatv2u12'] %>
