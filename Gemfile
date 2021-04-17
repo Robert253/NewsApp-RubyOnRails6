@@ -39,6 +39,8 @@ gem 'devise'
 # Adminisstrative dashboard
 gem 'activeadmin'
 
+# Deployment
+gem 'pg'
 # ---------------------------------------------------------
 
 group :development, :test do
